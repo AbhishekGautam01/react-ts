@@ -8,11 +8,9 @@ var HTMLWebpackConfigPlugin = new HTMLWebpackPlugin({
   filename: 'index.html',
   inject: true,
 });
-
 module.exports = function (_env, argv) {
   const isProduction = argv.mode === 'production';
   const isDevelopment = !isProduction;
-
   return {
     devtool: isDevelopment && 'cheap-module-source-map', // Enable source Map generation in development mode
     entry: './src/index.tsx', // The Main Entry Point
